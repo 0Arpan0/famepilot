@@ -1,0 +1,21 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+#hover:hover{
+    background-color: rgba(225, 216, 241, 1);
+    cursor: pointer;
+    color: rgba(103, 58, 183, 1);
+    font-weight: bolder;
+    border-left: 3px solid  rgba(103, 58, 183, 1);
+}
+
+.wifi, .purple:hover {
+    cursor: pointer;
+    color: rgba(103, 58, 183, 1);
+    font-weight: bolder;
+    border-bottom: 3px solid  rgba(103, 58, 183, 1);
+    
+}
+
+
