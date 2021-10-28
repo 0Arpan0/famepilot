@@ -5,7 +5,7 @@ function Screen1() {
   return (
     <>
       <div
-        style={{         
+        style={{
           width: "100vw",
           height: "100vh",
           padding: "25px",
@@ -80,7 +80,8 @@ function Screen1() {
           >
             <span
               style={{
-                border: "1px solid black",
+                border: "1px solid lightgray",
+                backgroundColor:"lightgray",
                 width: "35px",
                 height: "35px",
                 borderRadius: "100%",
@@ -111,13 +112,13 @@ function Screen1() {
           </div>
         </div>{" "}
         <br />
-        <div
-          className="conatiner-fluid d-flex"
-          style={{height: "90%" }}
-        >
+        <div className="conatiner-fluid d-flex" style={{ height: "90%" }}>
           <div
             className="d-flex flex-column"
-            style={{ width: "300px", backgroundColor:"rgba(252, 251, 255, 1)"  }}
+            style={{
+              width: "300px",
+              backgroundColor: "rgba(252, 251, 255, 1)",
+            }}
           >
             <div
               id="hover"
@@ -213,7 +214,6 @@ function Screen1() {
                       <span
                         className="d-flex align-items-center"
                         style={{ fontSize: "14px", fontWeight: "bolder" }}
-
                       >
                         Permissions
                       </span>
@@ -278,10 +278,7 @@ function Screen1() {
               </div>
             </div>
             <br />
-            <div
-              className="container"
-              style={{width: "82%" }}
-            >
+            <div className="container" style={{ width: "82%" }}>
               <div
                 className="d-flex justify-content-between"
                 style={{ width: "200px" }}

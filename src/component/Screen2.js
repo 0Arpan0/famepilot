@@ -80,7 +80,8 @@ function Screen2() {
           >
             <span
               style={{
-                border: "1px solid black",
+                border: "1px solid lightgray",
+                backgroundColor:"lightgray",
                 width: "35px",
                 height: "35px",
                 borderRadius: "100%",
@@ -111,13 +112,13 @@ function Screen2() {
           </div>
         </div>{" "}
         <br />
-        <div
-          className="conatiner-fluid d-flex"
-          style={{height: "90%" }}
-        >
+        <div className="conatiner-fluid d-flex" style={{ height: "90%" }}>
           <div
             className="d-flex flex-column"
-            style={{ width: "300px", backgroundColor:"rgba(252, 251, 255, 1)"  }}
+            style={{
+              width: "300px",
+              backgroundColor: "rgba(252, 251, 255, 1)",
+            }}
           >
             <div
               id="hover"
@@ -213,7 +214,6 @@ function Screen2() {
                       <span
                         className="d-flex align-items-center"
                         style={{ fontSize: "14px", fontWeight: "bolder" }}
-
                       >
                         Permissions
                       </span>
@@ -277,30 +277,30 @@ function Screen2() {
                 </div>
               </div>
             </div>
-            
+
             <br />
-            <div
-              className="container"
-              style={{ width: "85%" }}
-            >
+            <div className="container" style={{ width: "85%" }}>
               <div
                 className="d-flex justify-content-between align-items-center"
                 style={{ width: "220px" }}
               >
-                  <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="grey"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z"/></svg>{" "}
-
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="36px"
+                  viewBox="0 0 24 24"
+                  width="36px"
+                  fill="grey"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z" />
+                </svg>{" "}
                 <span
                   style={{
-                                     
                     color: "rgba(103, 58, 183, 1)",
-                    
                   }}
-
                 >
-                  
                   Management Team
                 </span>
-
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -311,39 +311,37 @@ function Screen2() {
                   <path d="M0 0h24v24H0V0z" fill="none" />
                   <path d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
                 </svg>
-
-               
               </div>
               <br />
 
-              <div className="d-flex" style={{borderBottom:"1px solid grey"}}>
+              <div
+                className="d-flex"
+                style={{ borderBottom: "1px solid grey" }}
+              >
+                <div style={{ marginLeft: "15px" }}>
+                  <div className="d-flex wifi">
+                    <span
+                      className="d-flex align-items-center"
+                      style={{ fontSize: "14px", fontWeight: "bolder" }}
+                    >
+                      Access Control
+                    </span>
+                  </div>
+                </div>
+                <div>
                   <div style={{ marginLeft: "15px" }}>
-                    <div className="d-flex wifi">                     
-
+                    <div className="d-flex purple">
                       <span
                         className="d-flex align-items-center"
                         style={{ fontSize: "14px", fontWeight: "bolder" }}
-
                       >
-                        Access Control
+                        &nbsp;Assigned Members
                       </span>
                     </div>
                   </div>
-                  <div>
-                    <div style={{ marginLeft: "15px" }}>
-                      <div className="d-flex purple">
-                       
-                        <span
-                          className="d-flex align-items-center"
-                          style={{ fontSize: "14px", fontWeight: "bolder" }}
-                        >
-                          &nbsp;Assigned Members
-                        </span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <br/>
+              </div>
+              <br />
 
               <table class="table">
                 <thead
@@ -361,13 +359,12 @@ function Screen2() {
                 <tbody>
                   <tr style={{ textAlign: "center" }}>
                     <th scope="row" style={{ textAlign: "start" }}>
-
                       {" "}
                       <div className="d-flex align-items-center">
-                      <span class="material-icons-outlined">
-add_circle_outline
-</span>{" "}
-                      &nbsp;Budget
+                        <span class="material-icons-outlined">
+                          add_circle_outline
+                        </span>{" "}
+                        &nbsp;Budget
                       </div>
                     </th>
                     <td>
@@ -384,30 +381,71 @@ add_circle_outline
                       </button>
                     </td>
                     <td>
-                        <div className="d-flex justify-content-between align-items-center" style={{width:"120px"}}>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>View</span>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>Create</span>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>Edit</span>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>Delete</span>
-                        </div>
-
+                      <div
+                        className="d-flex justify-content-between align-items-center"
+                        style={{ width: "120px" }}
+                      >
+                        <span
+                          style={{
+                            borderRight: "2px solid grey",
+                            fontSize: "12px",
+                            padding: "5px",
+                            fontWeight: "bolder",
+                          }}
+                        >
+                          View
+                        </span>
+                        <span
+                          style={{
+                            borderRight: "2px solid grey",
+                            fontSize: "12px",
+                            padding: "5px",
+                            fontWeight: "bolder",
+                          }}
+                        >
+                          Create
+                        </span>
+                        <span
+                          style={{
+                            borderRight: "2px solid grey",
+                            fontSize: "12px",
+                            padding: "5px",
+                            fontWeight: "bolder",
+                          }}
+                        >
+                          Edit
+                        </span>
+                        <span
+                          style={{
+                            borderRight: "2px solid grey",
+                            fontSize: "12px",
+                            padding: "5px",
+                            fontWeight: "bolder",
+                          }}
+                        >
+                          Delete
+                        </span>
+                      </div>
                     </td>
                     <td>1 min ago</td>
                     <td>
-                    <div class="form-check form-switch d-flex justify-content-center align-items-center">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-</div>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
                     </td>
                   </tr>
                   <tr style={{ textAlign: "center" }}>
                     <th scope="row" style={{ textAlign: "start" }}>
                       {" "}
-                      
                       <div className="d-flex align-items-center">
-                      <span class="material-icons-outlined">
-add_circle_outline
-</span>{" "}
-                      &nbsp;Bidding
+                        <span class="material-icons-outlined">
+                          add_circle_outline
+                        </span>{" "}
+                        &nbsp;Bidding
                       </div>
                     </th>
                     <td>
@@ -424,26 +462,27 @@ add_circle_outline
                       </button>
                     </td>
                     <td>
-                       
-                            <span>-</span>
-                       
-
+                      <span>-</span>
                     </td>
                     <td>1 min ago</td>
                     <td>
-                    <div class="form-check form-switch d-flex justify-content-center align-items-center">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-</div>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
                     </td>
                   </tr>
                   <tr style={{ textAlign: "center" }}>
                     <th scope="row" style={{ textAlign: "start" }}>
                       {" "}
                       <div className="d-flex align-items-center">
-                      <span class="material-icons-outlined">
-add_circle_outline
-</span>{" "}
-                      &nbsp;Vendor Portal
+                        <span class="material-icons-outlined">
+                          add_circle_outline
+                        </span>{" "}
+                        &nbsp;Vendor Portal
                       </div>
                     </th>
                     <td>
@@ -460,30 +499,71 @@ add_circle_outline
                       </button>
                     </td>
                     <td>
-                        <div className="d-flex justify-content-between align-items-center" style={{width:"120px"}}>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>View</span>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>Create</span>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>Edit</span>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>Delete</span>
-                        </div>
-
+                      <div
+                        className="d-flex justify-content-between align-items-center"
+                        style={{ width: "120px" }}
+                      >
+                        <span
+                          style={{
+                            borderRight: "2px solid grey",
+                            fontSize: "12px",
+                            padding: "5px",
+                            fontWeight: "bolder",
+                          }}
+                        >
+                          View
+                        </span>
+                        <span
+                          style={{
+                            borderRight: "2px solid grey",
+                            fontSize: "12px",
+                            padding: "5px",
+                            fontWeight: "bolder",
+                          }}
+                        >
+                          Create
+                        </span>
+                        <span
+                          style={{
+                            borderRight: "2px solid grey",
+                            fontSize: "12px",
+                            padding: "5px",
+                            fontWeight: "bolder",
+                          }}
+                        >
+                          Edit
+                        </span>
+                        <span
+                          style={{
+                            borderRight: "2px solid grey",
+                            fontSize: "12px",
+                            padding: "5px",
+                            fontWeight: "bolder",
+                          }}
+                        >
+                          Delete
+                        </span>
+                      </div>
                     </td>
                     <td>1 min ago</td>
                     <td>
-                    <div class="form-check form-switch d-flex justify-content-center align-items-center">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-</div>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
                     </td>
                   </tr>
                   <tr style={{ textAlign: "center" }}>
                     <th scope="row" style={{ textAlign: "start" }}>
                       {" "}
-                      
                       <div className="d-flex align-items-center">
-                      <span class="material-icons-outlined">
-add_circle_outline
-</span>{" "}
-                      &nbsp;Bidding
+                        <span class="material-icons-outlined">
+                          add_circle_outline
+                        </span>{" "}
+                        &nbsp;Bidding
                       </div>
                     </th>
                     <td>
@@ -500,26 +580,46 @@ add_circle_outline
                       </button>
                     </td>
                     <td>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>View</span>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>Create</span>
-                     
-
+                      <span
+                        style={{
+                          borderRight: "2px solid grey",
+                          fontSize: "12px",
+                          padding: "5px",
+                          fontWeight: "bolder",
+                        }}
+                      >
+                        View
+                      </span>
+                      <span
+                        style={{
+                          borderRight: "2px solid grey",
+                          fontSize: "12px",
+                          padding: "5px",
+                          fontWeight: "bolder",
+                        }}
+                      >
+                        Create
+                      </span>
                     </td>
                     <td>1 min ago</td>
                     <td>
-                    <div class="form-check form-switch d-flex justify-content-center align-items-center">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-</div>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
                     </td>
                   </tr>
                   <tr style={{ textAlign: "center" }}>
                     <th scope="row" style={{ textAlign: "start" }}>
                       {" "}
                       <div className="d-flex align-items-center">
-                      <span class="material-icons-outlined">
-add_circle_outline
-</span>{" "}
-                      &nbsp;Purchase Order/ Work Order
+                        <span class="material-icons-outlined">
+                          add_circle_outline
+                        </span>{" "}
+                        &nbsp;Purchase Order/ Work Order
                       </div>
                     </th>
                     <td>
@@ -536,28 +636,46 @@ add_circle_outline
                       </button>
                     </td>
                     <td>
-                        
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>View</span>
-                            <span style={{borderRight:"2px solid grey", fontSize:"12px", padding:"5px", fontWeight:"bolder"}}>Create</span>
-                            
-                   
-
+                      <span
+                        style={{
+                          borderRight: "2px solid grey",
+                          fontSize: "12px",
+                          padding: "5px",
+                          fontWeight: "bolder",
+                        }}
+                      >
+                        View
+                      </span>
+                      <span
+                        style={{
+                          borderRight: "2px solid grey",
+                          fontSize: "12px",
+                          padding: "5px",
+                          fontWeight: "bolder",
+                        }}
+                      >
+                        Create
+                      </span>
                     </td>
                     <td>1 min ago</td>
                     <td>
-                    <div class="form-check form-switch d-flex justify-content-center align-items-center">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-</div>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
                     </td>
                   </tr>
                   <tr style={{ textAlign: "center" }}>
                     <th scope="row" style={{ textAlign: "start" }}>
                       {" "}
                       <div className="d-flex align-items-center">
-                      <span class="material-icons-outlined">
-add_circle_outline
-</span>{" "}
-                      &nbsp;Organisation Profile
+                        <span class="material-icons-outlined">
+                          add_circle_outline
+                        </span>{" "}
+                        &nbsp;Organisation Profile
                       </div>
                     </th>
                     <td>
@@ -574,14 +692,17 @@ add_circle_outline
                       </button>
                     </td>
                     <td>
-                    <span>-</span>
-
+                      <span>-</span>
                     </td>
                     <td>1 min ago</td>
                     <td>
-                    <div class="form-check form-switch d-flex justify-content-center align-items-center">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-</div>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
                     </td>
                   </tr>
                 </tbody>
