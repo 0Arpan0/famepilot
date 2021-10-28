@@ -454,7 +454,7 @@ function Screen3() {
                   {hideonclick && (
                   <th scope="row" style={{ textAlign: "start" }}>
                       {" "}
-                      <div className="d-flex align-items-center" onClick={hide}>
+                      <div className="d-flex align-items-center" onClick={hide} style={{cursor:"pointer"}}>
                         <span class="material-icons-outlined">
                           add_circle_outline
                         </span>{" "}
@@ -464,7 +464,7 @@ function Screen3() {
                     )}
 
                     {visibility && (<td>
-                      <div className="d-flex align-items-center" onClick={hide}>
+                      <div className="d-flex align-items-center" onClick={hide} style={{cursor:"pointer"}}>
                         <span class="material-icons-outlined">
                           remove_circle_outline
                         </span>{" "}
@@ -495,7 +495,7 @@ function Screen3() {
                     <td>
                       <div class="form-check form-switch d-flex justify-content-center align-items-center">
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="checkbox"
                           id="flexSwitchCheckDefault"
                         />
