@@ -81,7 +81,7 @@ function Screen2() {
             <span
               style={{
                 border: "1px solid lightgray",
-                backgroundColor:"lightgray",
+                backgroundColor: "lightgray",
                 width: "35px",
                 height: "35px",
                 borderRadius: "100%",

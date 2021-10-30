@@ -7,11 +7,60 @@ function Screen3() {
   const hide = () => {
     setVisibility((wasOpened) => !wasOpened);
     setHideonclick(false);
-     if(visibility === true) {
-       setHideonclick((wasOpened) => !wasOpened)
+    if (visibility === true) {
+      setHideonclick((wasOpened) => !wasOpened);
       setHideonclick(true);
-     
-     }
+    }
+  };
+  const [visibility2, setVisibility2] = useState(false);
+  const [hideonclick2, setHideonclick2] = useState(true); //+
+  const hide2 = () => {
+    setVisibility2((wasOpened) => !wasOpened);
+    setHideonclick2(false);
+    if (visibility2 === true) {
+      setHideonclick2((wasOpened) => !wasOpened);
+      setHideonclick2(true);
+    }
+  };
+  const [visibility3, setVisibility3] = useState(false);
+  const [hideonclick3, setHideonclick3] = useState(true); //+
+  const hide3 = () => {
+    setVisibility3((wasOpened) => !wasOpened);
+    setHideonclick3(false);
+    if (visibility3 === true) {
+      setHideonclick3((wasOpened) => !wasOpened);
+      setHideonclick3(true);
+    }
+  };
+  const [visibility4, setVisibility4] = useState(false);
+  const [hideonclick4, setHideonclick4] = useState(true); //+
+  const hide4 = () => {
+    setVisibility4((wasOpened) => !wasOpened);
+    setHideonclick4(false);
+    if (visibility4 === true) {
+      setHideonclick4((wasOpened) => !wasOpened);
+      setHideonclick4(true);
+    }
+  };
+  const [visibility5, setVisibility5] = useState(false);
+  const [hideonclick5, setHideonclick5] = useState(true); //+
+  const hide5 = () => {
+    setVisibility5((wasOpened) => !wasOpened);
+    setHideonclick5(false);
+    if (visibility5 === true) {
+      setHideonclick5((wasOpened) => !wasOpened);
+      setHideonclick5(true);
+    }
+  };
+  const [visibility6, setVisibility6] = useState(false);
+  const [hideonclick6, setHideonclick6] = useState(true); //+
+  const hide6 = () => {
+    setVisibility6((wasOpened) => !wasOpened);
+    setHideonclick6(false);
+    if (visibility6 === true) {
+      setHideonclick6((wasOpened) => !wasOpened);
+      setHideonclick6(true);
+    }
   };
   return (
     <>
@@ -92,7 +141,7 @@ function Screen3() {
             <span
               style={{
                 border: "1px solid lightgray",
-                backgroundColor:"lightgray",
+                backgroundColor: "lightgray",
                 width: "35px",
                 height: "35px",
                 borderRadius: "100%",
@@ -369,128 +418,103 @@ function Screen3() {
                 </thead>
                 <tbody>
                   <tr style={{ textAlign: "center" }}>
-                    <th scope="row" style={{ textAlign: "start" }}>
-                      {" "}
-                      <div className="d-flex align-items-center">
-                        <span class="material-icons-outlined">
-                          add_circle_outline
-                        </span>{" "}
-                        &nbsp;Budget
-                      </div>
-                    </th>
-                    <td>
-                      <button
-                        style={{
-                          borderRadius: "20px",
-                          width: "100%",
-                          border: "1px solid green",
-                          color: "green",
-                          backgroundColor: "lightgreen",
-                        }}
-                      >
-                        All Access
-                      </button>
-                    </td>
-                    <td>
-                      <div
-                        className="d-flex justify-content-between align-items-center"
-                        style={{ width: "120px" }}
-                      >
-                        <span
-                          style={{
-                            borderRight: "2px solid grey",
-                            fontSize: "12px",
-                            padding: "5px",
-                            fontWeight: "bolder",
-                          }}
+                    {hideonclick && (
+                      <th scope="row" style={{ textAlign: "start" }}>
+                        {" "}
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide}
+                          style={{ cursor: "pointer" }}
                         >
-                          View
-                        </span>
-                        <span
-                          style={{
-                            borderRight: "2px solid grey",
-                            fontSize: "12px",
-                            padding: "5px",
-                            fontWeight: "bolder",
-                          }}
-                        >
-                          Create
-                        </span>
-                        <span
-                          style={{
-                            borderRight: "2px solid grey",
-                            fontSize: "12px",
-                            padding: "5px",
-                            fontWeight: "bolder",
-                          }}
-                        >
-                          Edit
-                        </span>
-                        <span
-                          style={{
-                            borderRight: "2px solid grey",
-                            fontSize: "12px",
-                            padding: "5px",
-                            fontWeight: "bolder",
-                          }}
-                        >
-                          Delete
-                        </span>
-                      </div>
-                    </td>
-                    <td>1 min ago</td>
-                    <td>
-                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckDefault"
-                        />
-                      </div>
-                    </td>
-                  </tr>
-                  <tr style={{ textAlign: "center" }}>
-
-                  {hideonclick && (
-                  <th scope="row" style={{ textAlign: "start" }}>
-                      {" "}
-                      <div className="d-flex align-items-center" onClick={hide} style={{cursor:"pointer"}}>
-                        <span class="material-icons-outlined">
-                          add_circle_outline
-                        </span>{" "}
-                        &nbsp;Bidding
-                      </div>
-                    </th>
+                          <span class="material-icons-outlined">
+                            add_circle_outline
+                          </span>{" "}
+                          &nbsp;Budget
+                        </div>
+                      </th>
                     )}
 
-                    {visibility && (<td>
-                      <div className="d-flex align-items-center" onClick={hide} style={{cursor:"pointer"}}>
-                        <span class="material-icons-outlined">
-                          remove_circle_outline
-                        </span>{" "}
-                        &nbsp;Bidding
-                      </div>
-                    </td>
+                    {visibility && (
+                      <td>
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            remove_circle_outline
+                          </span>{" "}
+                          &nbsp;Budget
+                        </div>
+                      </td>
                     )}
-                  {hideonclick && (
-                  <td>
-                      <button
-                        style={{
-                          borderRadius: "20px",
-                          width: "100%",
-                          border: "1px solid grey",
-                          color: "grey",
-                          backgroundColor: "rgba(242, 242, 242, 1)",
-                        }}
-                      >
-                        No Access
-                      </button>
-                    </td>
-                      )}
-                   {hideonclick&& ( <td>-</td>)}
-                  {visibility && ( <td></td>)}
-                  {visibility && ( <td></td>)}
-                
+                    {hideonclick && (
+                      <td>
+                        <button
+                          style={{
+                            borderRadius: "20px",
+                            width: "100%",
+                            border: "1px solid green",
+                            color: "green",
+                            backgroundColor: "lightgreen",
+                          }}
+                        >
+                          All Access
+                        </button>
+                      </td>
+                    )}
+                    {hideonclick && (
+                      <td>
+                        <div
+                          className="d-flex justify-content-between align-items-center"
+                          style={{ width: "120px" }}
+                        >
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            View
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Create
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Edit
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Delete
+                          </span>
+                        </div>
+                      </td>
+                    )}
+                    {visibility && <td></td>}
+                    {visibility && <td></td>}
+
                     <td>1 min ago</td>
                     <td>
                       <div class="form-check form-switch d-flex justify-content-center align-items-center">
@@ -663,6 +687,228 @@ function Screen3() {
                       </>
                     </th>
                   )}
+                  <tr style={{ textAlign: "center" }}>
+                    {hideonclick2 && (
+                      <th scope="row" style={{ textAlign: "start" }}>
+                        {" "}
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide2}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            add_circle_outline
+                          </span>{" "}
+                          &nbsp;Bidding
+                        </div>
+                      </th>
+                    )}
+
+                    {visibility2 && (
+                      <td>
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide2}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            remove_circle_outline
+                          </span>{" "}
+                          &nbsp;Bidding
+                        </div>
+                      </td>
+                    )}
+                    {hideonclick2 && (
+                      <td>
+                        <button
+                          style={{
+                            borderRadius: "20px",
+                            width: "100%",
+                            border: "1px solid grey",
+                            color: "grey",
+                            backgroundColor: "rgba(242, 242, 242, 1)",
+                          }}
+                        >
+                          No Access
+                        </button>
+                      </td>
+                    )}
+                    {hideonclick2 && <td>-</td>}
+                    {visibility2 && <td></td>}
+                    {visibility2 && <td></td>}
+
+                    <td>1 min ago</td>
+                    <td>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  {visibility2 && (
+                    <th colSpan="3" scope="row" style={{ textAlign: "start" }}>
+                      {" "}
+                      <>
+                        <br />
+                        <div
+                          className="container"
+                          style={{ marginLeft: "17px" }}
+                        >
+                          All aspects in the bidding module
+                        </div>
+                        <div
+                          className="container d-flex"
+                          style={{ marginLeft: "12%", padding: "20px" }}
+                        >
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              Access Control
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "160px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>All Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access all items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "300px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>Restricted Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access only assigned or created items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "35px",
+                                width: "180px",
+                                padding: "10px",
+                              }}
+                            >
+                              Permissions
+                            </div>
+                            <div style={{ padding: "10px" }}>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  View items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Edit items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Create items in access{" "}
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Delete items in access{" "}
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    </th>
+                  )}
 
                   {/* <td>
                     <td>
@@ -674,33 +920,324 @@ function Screen3() {
                 </td> */}
 
                   <tr style={{ textAlign: "center" }}>
-                    <th scope="row" style={{ textAlign: "start" }}>
-                      {" "}
-                      <div className="d-flex align-items-center">
-                        <span class="material-icons-outlined">
-                          add_circle_outline
-                        </span>{" "}
-                        &nbsp;Vendor Portal
+                    {hideonclick3 && (
+                      <th scope="row" style={{ textAlign: "start" }}>
+                        {" "}
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide3}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            add_circle_outline
+                          </span>{" "}
+                          &nbsp;Vendor Portal
+                        </div>
+                      </th>
+                    )}
+
+                    {visibility3 && (
+                      <td>
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide3}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            remove_circle_outline
+                          </span>{" "}
+                          &nbsp;Vendor Portal
+                        </div>
+                      </td>
+                    )}
+                    {hideonclick3 && (
+                      <td>
+                        <button
+                          style={{
+                            borderRadius: "20px",
+                            width: "100%",
+                            border: "1px solid red",
+                            color: "red",
+                            backgroundColor: "rgba(255, 8, 8, 0.3)",
+                          }}
+                        >
+                          Restricted Access
+                        </button>
+                      </td>
+                    )}
+                    {hideonclick3 && (
+                      <td>
+                        <div
+                          className="d-flex justify-content-between align-items-center"
+                          style={{ width: "120px" }}
+                        >
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            View
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Create
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Edit
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Delete
+                          </span>
+                        </div>
+                      </td>
+                    )}
+                    {visibility3 && <td></td>}
+                    {visibility3 && <td></td>}
+
+                    <td>1 min ago</td>
+                    <td>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
                       </div>
-                    </th>
-                    <td>
-                      <button
-                        style={{
-                          borderRadius: "20px",
-                          width: "100%",
-                          border: "1px solid red",
-                          color: "red",
-                          backgroundColor: "rgba(255, 8, 8, 0.3)",
-                        }}
-                      >
-                        Restricted Access
-                      </button>
                     </td>
-                    <td>
-                      <div
-                        className="d-flex justify-content-between align-items-center"
-                        style={{ width: "120px" }}
-                      >
+                  </tr>
+                  {visibility3 && (
+                    <th colSpan="3" scope="row" style={{ textAlign: "start" }}>
+                      {" "}
+                      <>
+                        <br />
+                        <div
+                          className="container"
+                          style={{ marginLeft: "17px" }}
+                        >
+                          All aspects in the bidding module
+                        </div>
+                        <div
+                          className="container d-flex"
+                          style={{ marginLeft: "12%", padding: "20px" }}
+                        >
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              Access Control
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "160px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>All Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access all items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "300px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>Restricted Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access only assigned or created items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "35px",
+                                width: "180px",
+                                padding: "10px",
+                              }}
+                            >
+                              Permissions
+                            </div>
+                            <div style={{ padding: "10px" }}>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  View items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Edit items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Create items in access{" "}
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Delete items in access{" "}
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    </th>
+                  )}
+
+                  <tr style={{ textAlign: "center" }}>
+                    {hideonclick4 && (
+                      <th scope="row" style={{ textAlign: "start" }}>
+                        {" "}
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide4}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            add_circle_outline
+                          </span>{" "}
+                          &nbsp;Purchase Order/ Work Order
+                        </div>
+                      </th>
+                    )}
+
+                    {visibility4 && (
+                      <td>
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide4}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            remove_circle_outline
+                          </span>{" "}
+                          &nbsp;Purchase Order/ Work Order
+                        </div>
+                      </td>
+                    )}
+                    {hideonclick4 && (
+                      <td>
+                        <button
+                          style={{
+                            borderRadius: "20px",
+                            width: "100%",
+                            border: "1px solid grey",
+                            color: "grey",
+                            backgroundColor: "rgba(242, 242, 242, 1)",
+                          }}
+                        >
+                          No Access
+                        </button>
+                      </td>
+                    )}
+                    {hideonclick4 && (
+                      <td>
                         <span
                           style={{
                             borderRight: "2px solid grey",
@@ -721,188 +1258,676 @@ function Screen3() {
                         >
                           Create
                         </span>
-                        <span
+                      </td>
+                    )}
+                    {visibility4 && <td></td>}
+                    {visibility4 && <td></td>}
+
+                    <td>1 min ago</td>
+                    <td>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  {visibility4 && (
+                    <th colSpan="3" scope="row" style={{ textAlign: "start" }}>
+                      {" "}
+                      <>
+                        <br />
+                        <div
+                          className="container"
+                          style={{ marginLeft: "17px" }}
+                        >
+                          All aspects in the bidding module
+                        </div>
+                        <div
+                          className="container d-flex"
+                          style={{ marginLeft: "12%", padding: "20px" }}
+                        >
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              Access Control
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "160px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>All Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access all items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "300px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>Restricted Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access only assigned or created items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "35px",
+                                width: "180px",
+                                padding: "10px",
+                              }}
+                            >
+                              Permissions
+                            </div>
+                            <div style={{ padding: "10px" }}>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  View items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Edit items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Create items in access{" "}
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Delete items in access{" "}
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    </th>
+                  )}
+                  <tr style={{ textAlign: "center" }}>
+                    {hideonclick5 && (
+                      <th scope="row" style={{ textAlign: "start" }}>
+                        {" "}
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide5}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            add_circle_outline
+                          </span>{" "}
+                          &nbsp;Organisation Profile
+                        </div>
+                      </th>
+                    )}
+
+                    {visibility5 && (
+                      <td>
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide5}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            remove_circle_outline
+                          </span>{" "}
+                          &nbsp;Organisation Profile
+                        </div>
+                      </td>
+                    )}
+                    {hideonclick5 && (
+                      <td>
+                        <button
                           style={{
-                            borderRight: "2px solid grey",
-                            fontSize: "12px",
-                            padding: "5px",
-                            fontWeight: "bolder",
+                            borderRadius: "20px",
+                            width: "100%",
+                            border: "1px solid red",
+                            color: "red",
+                            backgroundColor: "rgba(255, 8, 8, 0.3)",
                           }}
                         >
-                          Edit
-                        </span>
-                        <span
+                          Restricted Access
+                        </button>
+                      </td>
+                    )}
+                    {hideonclick5 && (
+                      <td>
+                        <div
+                          className="d-flex justify-content-between align-items-center"
+                          style={{ width: "120px" }}
+                        >
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            View
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Create
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Edit
+                          </span>
+                          <span
+                            style={{
+                              borderRight: "2px solid grey",
+                              fontSize: "12px",
+                              padding: "5px",
+                              fontWeight: "bolder",
+                            }}
+                          >
+                            Delete
+                          </span>
+                        </div>
+                      </td>
+                    )}
+                    {visibility5 && <td></td>}
+                    {visibility5 && <td></td>}
+
+                    <td>1 min ago</td>
+                    <td>
+                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckDefault"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  {visibility5 && (
+                    <th colSpan="3" scope="row" style={{ textAlign: "start" }}>
+                      {" "}
+                      <>
+                        <br />
+                        <div
+                          className="container"
+                          style={{ marginLeft: "17px" }}
+                        >
+                          All aspects in the bidding module
+                        </div>
+                        <div
+                          className="container d-flex"
+                          style={{ marginLeft: "12%", padding: "20px" }}
+                        >
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              Access Control
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "160px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>All Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access all items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "300px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>Restricted Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access only assigned or created items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "35px",
+                                width: "180px",
+                                padding: "10px",
+                              }}
+                            >
+                              Permissions
+                            </div>
+                            <div style={{ padding: "10px" }}>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  View items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Edit items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Create items in access{" "}
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Delete items in access{" "}
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    </th>
+                  )}
+
+                  <tr style={{ textAlign: "center" }}>
+                    {hideonclick6 && (
+                      <th scope="row" style={{ textAlign: "start" }}>
+                        {" "}
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide6}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            add_circle_outline
+                          </span>{" "}
+                          &nbsp;Permissions & Access Control
+                        </div>
+                      </th>
+                    )}
+
+                    {visibility6 && (
+                      <td>
+                        <div
+                          className="d-flex align-items-center"
+                          onClick={hide6}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span class="material-icons-outlined">
+                            remove_circle_outline
+                          </span>{" "}
+                          &nbsp;Permissions & Access Control
+                        </div>
+                      </td>
+                    )}
+                    {hideonclick6 && (
+                      <td>
+                        <button
                           style={{
-                            borderRight: "2px solid grey",
-                            fontSize: "12px",
-                            padding: "5px",
-                            fontWeight: "bolder",
+                            borderRadius: "20px",
+                            width: "100%",
+                            border: "1px solid grey",
+                            color: "grey",
+                            backgroundColor: "rgba(242, 242, 242, 1)",
                           }}
                         >
-                          Delete
-                        </span>
-                      </div>
-                    </td>
+                          No Access
+                        </button>
+                      </td>
+                    )}
+                    {hideonclick6 && <td>-</td>}
+                    {visibility6 && <td></td>}
+                    {visibility6 && <td></td>}
+
                     <td>1 min ago</td>
                     <td>
                       <div class="form-check form-switch d-flex justify-content-center align-items-center">
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="checkbox"
                           id="flexSwitchCheckDefault"
                         />
                       </div>
                     </td>
                   </tr>
-                  <tr style={{ textAlign: "center" }}>
-                    <th scope="row" style={{ textAlign: "start" }}>
+                  {visibility6 && (
+                    <th colSpan="3" scope="row" style={{ textAlign: "start" }}>
                       {" "}
-                      <div className="d-flex align-items-center">
-                        <span class="material-icons-outlined">
-                          add_circle_outline
-                        </span>{" "}
-                        &nbsp;Purchase Order/ Work Order
-                      </div>
+                      <>
+                        <br />
+                        <div
+                          className="container"
+                          style={{ marginLeft: "17px" }}
+                        >
+                          All aspects in the bidding module
+                        </div>
+                        <div
+                          className="container d-flex"
+                          style={{ marginLeft: "12%", padding: "20px" }}
+                        >
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              Access Control
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "160px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>All Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access all items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="d-flex align-items-center"
+                              style={{
+                                height: "55px",
+                                width: "315px",
+                                padding: "10px",
+                                borderRight: "1px solid grey",
+                              }}
+                            >
+                              <div
+                                className="d-flex justify-content-between align-items-center"
+                                style={{ width: "300px" }}
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <div className="d-flex flex-column">
+                                  <div>Restricted Access</div>
+                                  <div style={{ fontSize: "14px" }}>
+                                    can access only assigned or created items
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            className="d-flex flex-column"
+                            style={{ padding: "10px" }}
+                          >
+                            <div
+                              style={{
+                                height: "35px",
+                                width: "180px",
+                                padding: "10px",
+                              }}
+                            >
+                              Permissions
+                            </div>
+                            <div style={{ padding: "10px" }}>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  View items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Edit items in access
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Create items in access{" "}
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckDefault"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  Delete items in access{" "}
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
                     </th>
-                    <td>
-                      <button
-                        style={{
-                          borderRadius: "20px",
-                          width: "100%",
-                          border: "1px solid grey",
-                          color: "grey",
-                          backgroundColor: "rgba(242, 242, 242, 1)",
-                        }}
-                      >
-                        No Access
-                      </button>
-                    </td>
-                    <td>
-                      <span
-                        style={{
-                          borderRight: "2px solid grey",
-                          fontSize: "12px",
-                          padding: "5px",
-                          fontWeight: "bolder",
-                        }}
-                      >
-                        View
-                      </span>
-                      <span
-                        style={{
-                          borderRight: "2px solid grey",
-                          fontSize: "12px",
-                          padding: "5px",
-                          fontWeight: "bolder",
-                        }}
-                      >
-                        Create
-                      </span>
-                    </td>
-                    <td>1 min ago</td>
-                    <td>
-                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckDefault"
-                        />
-                      </div>
-                    </td>
-                  </tr>
-                  <tr style={{ textAlign: "center" }}>
-                    <th scope="row" style={{ textAlign: "start" }}>
-                      {" "}
-                      <div className="d-flex align-items-center">
-                        <span class="material-icons-outlined">
-                          add_circle_outline
-                        </span>{" "}
-                        &nbsp;Organisation Profile
-                      </div>
-                    </th>
-                    <td>
-                      <button
-                        style={{
-                          borderRadius: "20px",
-                          width: "100%",
-                          border: "1px solid red",
-                          color: "red",
-                          backgroundColor: "rgba(255, 8, 8, 0.3)",
-                        }}
-                      >
-                        Restricted Access
-                      </button>
-                    </td>
-                    <td>
-                      <span
-                        style={{
-                          borderRight: "2px solid grey",
-                          fontSize: "12px",
-                          padding: "5px",
-                          fontWeight: "bolder",
-                        }}
-                      >
-                        View
-                      </span>
-                      <span
-                        style={{
-                          borderRight: "2px solid grey",
-                          fontSize: "12px",
-                          padding: "5px",
-                          fontWeight: "bolder",
-                        }}
-                      >
-                        Create
-                      </span>
-                    </td>
-                    <td>1 min ago</td>
-                    <td>
-                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckDefault"
-                        />
-                      </div>
-                    </td>
-                  </tr>
-                  <tr style={{ textAlign: "center" }}>
-                    <th scope="row" style={{ textAlign: "start" }}>
-                      {" "}
-                      <div className="d-flex align-items-center">
-                        <span class="material-icons-outlined">
-                          add_circle_outline
-                        </span>{" "}
-                        &nbsp;Permission & Access Control
-                      </div>
-                    </th>
-                    <td>
-                      <button
-                        style={{
-                          borderRadius: "20px",
-                          width: "100%",
-                          border: "1px solid green",
-                          color: "green",
-                          backgroundColor: "lightgreen",
-                        }}
-                      >
-                        All Access
-                      </button>
-                    </td>
-                    <td>
-                      <span>-</span>
-                    </td>
-                    <td>1 min ago</td>
-                    <td>
-                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckDefault"
-                        />
-                      </div>
-                    </td>
-                  </tr>
+                  )}
                 </tbody>
               </table>
             </div>
